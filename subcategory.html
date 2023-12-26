@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20231225053847" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20231225053847" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css?_v=20231225053847">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20231226191303" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20231226191303" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231226191303">
     <title>Женщинам</title>
 </head>
 
@@ -3088,7 +3088,7 @@
             </svg>
         </div>
         <div class="pagination-dropdown-js pagination__dropdown">
-            <a href="#" class="pagination__link pagination-link-js active">1</a>
+            <a href="#" class="active pagination-link-js pagination__link">1</a>
             <a href="#" class="pagination__link pagination-link-js">2</a>
             <a href="#" class="pagination__link pagination-link-js">3</a>
             <a href="#" class="pagination__link pagination-link-js">4</a>
@@ -4122,7 +4122,7 @@
 
                     <button type="button" class="open-popup-js search-form__select-category" data-target="#search-filter-category-popup" aria-label="Открыть фильтр по категориям">
                         <span class="search-form__current-category" id="search-form-current-category">Везде</span>
-                        <svg width="18" height="18">
+                        <svg width="18" height="18" id="search-form-select-category-cancel">
                             <use href="images/icons/icons.svg#chevron-down-small"></use>
                         </svg>
                     </button>
@@ -4218,6 +4218,15 @@
 
     <div class="catalog-menu__content">
         <ul id="search-filter-category-list" class="catalog-menu-list">
+
+            <li class="catalog-menu-list__item">
+                <a href="#" class="catalog-menu-list__link search-filter-category-link-js active default" data-id="1">
+                    <svg class="catalog-menu-list__icon" width="24" height="24">
+                        <use href="images/icons/icons.svg#catalog"></use>
+                    </svg>
+                    <span class="catalog-menu-list__title">Везде</span>
+                </a>
+            </li>
 
             <li class="catalog-menu-list__item">
                 <a href="#" class="catalog-menu-list__link search-filter-category-link-js" data-id="1">
@@ -4372,7 +4381,7 @@
 </button>
 </div>
 
-<script src="js/app.min.js?_v=20231225053847"></script>
+<script src="js/app.min.js?_v=20231226191303"></script>
 
 </body>
 </html>

@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240114212224" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240114212224" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240114212224">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240115024906" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240115024906" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240115024906">
     <title>Аккаунт</title>
 </head>
 
@@ -162,7 +162,7 @@
 
                 <form method="get" class="form-valid-js account-content__form">
                     <div class="form-group">
-                        <input type="text" name="phone" class="form-input form-input-required-js valid form-input-phone-js" disabled="disabled" value="+373 69 22 22">
+                        <input type="text" name="phone" class="form-input" disabled="disabled" value="+373 69 22 22">
 
                         <span class="form-group-title">Телефон</span>
 
@@ -171,11 +171,9 @@
                                 <use href="images/icons/icons.svg#edit"></use>
                             </svg>
                         </button>
-                        <span class="error-text error-empty">Это обязательное поле</span>
-                        <span class="error-text error-phone">Некорректный номер телефона</span>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="email" class="form-input form-input-required-js valid form-input-email-js" disabled="disabled" value="username@example.com">
+                        <input type="text" name="email" class="form-input" disabled="disabled" value="username@example.com">
 
                         <span class="form-group-title">Email</span>
 
@@ -184,8 +182,6 @@
                                 <use href="images/icons/icons.svg#edit"></use>
                             </svg>
                         </button>
-                        <span class="error-text error-empty">Это обязательное поле</span>
-                        <span class="error-text error-email">Некорректный email</span>
                     </div>
                     <div class="form-group">
                         <input type="text" name="name" class="form-input form-input-required-js valid" value="Константин">
@@ -440,7 +436,7 @@
 
         <div class="login__text">Мы отправим вам код в СМС<br> или позвоним</div>
 
-        <form action="" class="form-valid-js no-scroll-to-error login__form">
+        <form action="" class="form-valid-js login__form no-scroll-to-error">
             <div class="form-group">
                 <input type="tel" id="phone" class="form-input form-input-required-js form-input-phone-js login__input phone-countries-js" placeholder="Телефон" autocomplete="new-password">
                 <span class="error-text error-empty">Это обязательное поле</span>
@@ -487,15 +483,34 @@
 
         <div class="login__text">Amet ac augue donec aliquam risus turpis nunc. Dolor tincidunt.</div>
 
-        <form action="" class="form-valid-js no-scroll-to-error">
+        <form action="" class="form-valid-js login__form no-scroll-to-error">
 
             <div class="form-group">
-                <input type="text" class="form-input form-input-required-js form-input-email-js" placeholder="Email">
+                <input type="text" class="form-input form-input-required-js form-input-change-email form-input-email-js" placeholder="Email">
                 <span class="error-text error-empty">Это обязательное поле</span>
                 <span class="error-text error-email">Некорректный email</span>
             </div>
 
-            <button class="btn btn-full-width btn-green login__btn">
+            <div class="login__code">
+                <div class="form-group">
+                    <div class="form-group-title">Проверочный код</div>
+                    <input type="password" class="form-input form-input-required-js form-input__code" autocomplete="new-password" disabled="disabled">
+                    <span class="error-text error-empty">Это обязательное поле</span>
+                </div>
+                <div class="login__code-timer">
+                    <svg width="16" height="16" class="login__spinner">
+                        <use href="images/icons/icons.svg#spinner"></use>
+                    </svg>
+                    <span class="timer-value"></span>
+                </div>
+            </div>
+
+            <div class="login__buttons">
+                <a href="#" class="login__request-new-code">Запросить новый код</a>
+                <a href="#" class="login__change-phone">Изменить email</a>
+            </div>
+
+            <button class="btn btn-full-width btn-green login__btn" data-text-save="Сохранить" data-text-confirm="Подтвердить">
                 Сохранить
             </button>
         </form>
@@ -1293,7 +1308,7 @@
 
         <div class="login__text">Мы отправим вам код в СМС<br> или позвоним</div>
 
-        <form action="" class="form-valid-js no-scroll-to-error login__form">
+        <form action="" class="form-valid-js login__form no-scroll-to-error">
             <div class="form-group">
                 <input type="tel" id="phone" class="form-input form-input-required-js form-input-phone-js login__input phone-countries-js" placeholder="Телефон" autocomplete="new-password">
                 <span class="error-text error-empty">Это обязательное поле</span>
@@ -1356,7 +1371,7 @@
 </div>
 </div>
 
-<script src="js/app.min.js?_v=20240114212224"></script>
+<script src="js/app.min.js?_v=20240115024906"></script>
 
 </body>
 </html>

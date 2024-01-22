@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240118145531" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240118145531" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240118145531">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240122174911" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240122174911" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240122174911">
     <title>Женщинам</title>
 </head>
 
@@ -36,8 +36,13 @@
             </button>
 
             <button class="is-authorized header__button header__button-user open-user-menu-js">
-                <picture><source srcset="images/components/avatar.webp" type="image/webp"><img src="images/components/avatar.png" width="38" height="38" alt="Avatar"></picture>
-                <span class="counter">1</span>
+                <span class="icon">
+                    <svg width="18" height="18">
+                        <use href="images/icons/icons.svg#user"></use>
+                    </svg>
+                     <span class="counter">1</span>
+                </span>
+                <span class="header__button-user-name">Константин</span>
             </button>
 
         </div>
@@ -136,89 +141,11 @@
 
 <div class="main-banner main-banner-js subcategory-main-banner main-banner-mobile">
     <div class="swiper-wrapper">
-        <div class="swiper-slide item item-video">
-            <a href="#" class="link"></a>
-
-            <div class="video">
-                <video width="127" height="127" muted loop autoplay>
-                    <source src="images/subcategory/main-banner/test-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <button class="btn btn-green">
-                    <svg width="18" height="18">
-                        <use href="images/icons/icons.svg#play"></use>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="content">
-                <div class="title">Новое представление о комфорте</div>
-                <div class="text">Уютные диваны</div>
-            </div>
-
-            <span class="tooltip tooltip-slider">
-                <span class="tooltip-btn-js tooltip-slider__btn tooltip__btn">
-                    <svg width="12" height="12">
-                        <use href="images/icons/icons.svg#info"></use>
-                    </svg>
-                    <span class="tooltip-slider__text">Реклама</span>
-                </span>
-
-                <span class="tooltip-dropdown-js tooltip-slider__dropdown tooltip__dropdown">
-                    <span class="tooltip-slider__dropdown-text">
-                        Мы помогаем нашем продавцам об их товарах на Mego.
-                        Для этого у нас предусмотрены разные способы продвижения.
-                    </span>
-                    <a href="#" class="tooltip-slider__dropdown-link">
-                        Узнать больше о способах продвижения
-                    </a>
-                </span>
-            </span>
-        </div>
 
         <div class="swiper-slide item">
             <a href="#" class="link"></a>
             <div class="img">
                 <picture><source srcset="images/subcategory/main-banner/image-mobile-1.webp" type="image/webp"><img src="images/subcategory/main-banner/image-mobile-1.png" width="343" height="127" alt=""></picture>
-            </div>
-
-            <span class="tooltip tooltip-slider">
-                <span class="tooltip-btn-js tooltip-slider__btn tooltip__btn">
-                    <svg width="12" height="12">
-                        <use href="images/icons/icons.svg#info"></use>
-                    </svg>
-                    <span class="tooltip-slider__text">Реклама</span>
-                </span>
-
-                <span class="tooltip-dropdown-js tooltip-slider__dropdown tooltip__dropdown">
-                    <span class="tooltip-slider__dropdown-text">
-                        Мы помогаем нашем продавцам об их товарах на Mego.
-                        Для этого у нас предусмотрены разные способы продвижения.
-                    </span>
-                    <a href="#" class="tooltip-slider__dropdown-link">
-                        Узнать больше о способах продвижения
-                    </a>
-                </span>
-            </span>
-        </div>
-
-        <div class="swiper-slide item item-video">
-            <a href="#" class="link"></a>
-
-            <div class="video">
-                <video width="127" height="127" muted loop autoplay>
-                    <source src="images/subcategory/main-banner/test-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <button class="btn btn-green">
-                    <svg width="18" height="18">
-                        <use href="images/icons/icons.svg#play"></use>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="img">
-                <picture><source srcset="images/subcategory/main-banner/image-text-mobile-1.webp" type="image/webp"><img src="images/subcategory/main-banner/image-text-mobile-1.png" width="343" height="127" alt=""></picture>
             </div>
 
             <span class="tooltip tooltip-slider">
@@ -495,8 +422,6 @@
         <a href="#" class="select-link-js select__link">Новинки</a>
         <a href="#" class="select-link-js select__link">Сначала дешёвые</a>
         <a href="#" class="select-link-js select__link">Сначала дорогие</a>
-        <a href="#" class="select-link-js select__link">По размеру скидки</a>
-        <a href="#" class="select-link-js select__link">Высокий рейтинг</a>
     </div>
 </div>
 
@@ -536,6 +461,7 @@
                     </span>
                 </span>
             </span>
+            <span class="swiper-pagination"></span>
 
             <span class="icons-list">
                 <span class="tooltip-btn-js icon icon-tag">
@@ -658,6 +584,7 @@
                     </span>
                 </span>
             </span>
+            <span class="swiper-pagination"></span>
         </a>
 
         <div class="content">
@@ -3403,8 +3330,8 @@
             <div class="slider"></div>
 
             <div class="filter-slider__inputs">
-                <input type="text" class="min-value" value="50">
-                <input type="text" class="max-value" value="134879">
+                <input type="number" class="min-value" value="50">
+                <input type="number" class="max-value" value="134879">
             </div>
         </div>
 
@@ -3512,8 +3439,8 @@
                 <div class="slider"></div>
 
                 <div class="filter-slider__inputs">
-                    <input type="text" class="min-value" value="50">
-                    <input type="text" class="max-value" value="134879">
+                    <input type="number" class="min-value" value="50">
+                    <input type="number" class="max-value" value="134879">
                 </div>
             </div>
         </div>
@@ -3530,8 +3457,8 @@
                 <div class="slider"></div>
 
                 <div class="filter-slider__inputs">
-                    <input type="text" class="min-value" value="50">
-                    <input type="text" class="max-value" value="134879">
+                    <input type="number" class="min-value" value="50">
+                    <input type="number" class="max-value" value="134879">
                 </div>
             </div>
         </div>
@@ -3548,15 +3475,15 @@
                 <div class="slider"></div>
 
                 <div class="filter-slider__inputs">
-                    <input type="text" class="min-value" value="50">
-                    <input type="text" class="max-value" value="134879">
+                    <input type="number" class="min-value" value="50">
+                    <input type="number" class="max-value" value="134879">
                 </div>
             </div>
         </div>
     </div>
 
     <div class="filter__apply-wrap" id="filter-apply-block-js">
-        <button class="btn-green btn-full-width filter-apply-js filter__apply">Применить</button>
+        <button class="btn-full-width btn-green filter-apply-js filter__apply">Применить</button>
     </div>
 </form>
 
@@ -3760,7 +3687,7 @@
                 <li>
                     <a href="#">
                         <svg width="18" height="18">
-                            <use href="images/icons/icons.svg#package"></use>
+                            <use href="images/icons/icons.svg#shopping-cart"></use>
                         </svg>
                         Мои заказы
                     </a>
@@ -4081,58 +4008,63 @@
             </form>
         </div>
 
-        <div class="search-popup__popular-categories-wrap">
-            <div class="title">Популярные категории</div>
 
-            <div class="search-popup-popular-categories-js search-popup__popular-categories">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <span class="category-img">
-                                <img src="images/components/search/popular-categories/image-1.jpg" width="133" height="133" alt="">
-                            </span>
-                            <span class="category-title">Женщинам</span>
-                        </a>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <span class="category-img">
-                                <img src="images/components/search/popular-categories/image-2.jpg" width="133" height="133" alt="">
-                            </span>
-                            <span class="category-title">Мужчинам</span>
-                        </a>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <span class="category-img">
-                                <img src="images/components/search/popular-categories/image-3.jpg" width="133" height="133" alt="">
-                            </span>
-                            <span class="category-title">Детям</span>
-                        </a>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <span class="category-img">
-                                <img src="images/components/search/popular-categories/image-4.jpg" width="133" height="133" alt="">
-                            </span>
-                            <span class="category-title">Уход и аксессуары</span>
-                        </a>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <span class="category-img">
-                                <img src="images/components/search/popular-categories/image-5.jpg" width="133" height="133" alt="">
-                            </span>
-                            <span class="category-title">Смартфоны</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 </div>
 
@@ -4327,7 +4259,7 @@
 
         <form action="" class="form-valid-js login__form no-scroll-to-error">
             <div class="form-group">
-                <input type="tel" id="phone" class="form-input form-input-required-js form-input-phone-js login__input phone-countries-js" placeholder="Телефон" autocomplete="new-password">
+                <input type="number" id="phone" class="form-input form-input-required-js form-input-phone-js login__input phone-countries-js" placeholder="Телефон" autocomplete="new-password">
                 <span class="error-text error-empty">Это обязательное поле</span>
                 <span class="error-text error-phone">Некорректный номер телефона</span>
             </div>
@@ -4350,7 +4282,7 @@
                 </div>
             </div>
 
-            <button class="btn btn-green btn-full-width login__btn" data-text-enter="Войти" data-text-confirm="Подтвердить">
+            <button class="btn btn-full-width btn-green login__btn" data-text-enter="Войти" data-text-confirm="Подтвердить">
                 Войти
             </button>
 
@@ -4388,7 +4320,7 @@
 </div>
 </div>
 
-<script src="js/app.min.js?_v=20240118145531"></script>
+<script src="js/app.min.js?_v=20240122174911"></script>
 
 </body>
 </html>

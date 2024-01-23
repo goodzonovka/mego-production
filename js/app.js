@@ -43242,6 +43242,13 @@ function openSubCatalog(e) {
       if (brands.length) {
         displayBrands(brands);
       }
+
+      // console.log($('.sub-catalog-menu__header').outerHeight(true));
+      // console.log($('.sub-catalog-menu-list__columns').outerHeight());
+
+      if (isDesktop()) {
+        checkScroll();
+      }
     },
     error: function error(xhr, status, _error) {
       console.error("Ошибка загрузки данных: " + _error);
@@ -43251,6 +43258,20 @@ function openSubCatalog(e) {
   btnOpenSubCatalog.removeClass('active');
   jquery(this).addClass('active');
   subCatalogMenu.addClass('active');
+}
+if (isDesktop()) {
+  jquery(window).resize(function () {
+    checkScroll();
+  });
+}
+
+// нужен ли скролл
+function checkScroll() {
+  if (jquery('#sub-catalog-menu').outerHeight() < jquery('.sub-catalog-menu__header').outerHeight(true) + jquery('.sub-catalog-menu-list__columns').outerHeight()) {
+    jquery('#sub-catalog-menu').addClass('with-scroll');
+  } else {
+    jquery('#sub-catalog-menu').removeClass('with-scroll');
+  }
 }
 
 // закрыть подкаталог
@@ -43404,6 +43425,9 @@ function showMoreSubcategories(button) {
     showMoreBtn.find('span').text(langCollapse);
   } else {
     showMoreBtn.find('span').text(langMore);
+  }
+  if (isDesktop()) {
+    checkScroll();
   }
 }
 window.showMoreSubcategories = showMoreSubcategories;
@@ -44054,8 +44078,30 @@ document.addEventListener("DOMContentLoaded", function () {
       jquery(this).addClass('active');
       jquery(target).addClass('active');
     });
-    jquery('.product-purchase-additions-title-js').click(function () {
+    var checkboxes = document.querySelectorAll('.purchase-input-checkbox-js');
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener('change', function () {
+        // Если текущий чекбокс отмечен, деактивируем остальные в той же группе
+        if (this.checked) {
+          var groupName = this.name;
+          checkboxes.forEach(function (otherCheckbox) {
+            if (otherCheckbox.name === groupName && otherCheckbox !== checkbox) {
+              otherCheckbox.checked = false;
+            }
+          });
+        }
+      });
+    });
+    jquery('.product-purchase-additions-show-more-js').click(function () {
+      var dataShowText = jquery(this).data('text-show');
+      var dataHideText = jquery(this).data('text-hide');
       jquery('.product-purchase-additions').toggleClass('active');
+      jquery(this).toggleClass('active');
+      if (jquery(this).hasClass('active')) {
+        jquery(this).text(dataHideText);
+      } else {
+        jquery(this).text(dataShowText);
+      }
     });
     if (isDesktop()) {
       jquery('.product-variants__variant-color').mouseenter(function (e) {
